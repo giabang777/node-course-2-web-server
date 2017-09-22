@@ -19,12 +19,12 @@ app.use((req, res, next) => {
   console.log(log);
   next();
 });
-app.use((req,res,next) => {
-  res.render('maintain.hbs', {
-    pageTitle: 'Maintain',
-    content: 'Sorry, under construction!',
-  });
-})
+// app.use((req,res,next) => {
+//   res.render('maintain.hbs', {
+//     pageTitle: 'Maintain',
+//     content: 'Sorry, under construction!',
+//   });
+// })
 app.use(express.static('public'));
 hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
